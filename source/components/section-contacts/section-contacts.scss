@@ -1,0 +1,47 @@
+.contacts {
+  padding-top: 36px;
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+  &:after {
+    content: '';
+    height: 390px;
+    width: 130vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient($bg, transparent), url('/images/pp2.png') repeat;
+  }
+  .container {
+    z-index: 1;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__address {
+    font-size: 18px;
+    line-height: 120%;
+    margin: 0 auto 62px;
+    max-width: 500px;
+  }
+  &__phone {
+    font-size: 24px;
+    font-family: 'Roboto Light';
+    display: block;
+    margin-bottom: 5px;
+  }
+  &__email {
+    margin: 0 auto 58px;
+    font-size: 36px;
+    font-family: 'Roboto-Regular';
+    display: block;
+    @include media480 {
+      margin-bottom: 52px;
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+}

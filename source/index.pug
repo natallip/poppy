@@ -1,0 +1,16 @@
+extends static/pug/template
+include components/components
+
+block variables
+	- var title = 'poppy'
+	- var description = 'description'
+	- var keywords = 'keywords'
+
+block content
+
+	div.page__wrapper#fullpage
+		+section-home
+		+section-about
+		+section-production
+		+section-partners
+		+section-contacts

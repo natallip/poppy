@@ -1,0 +1,13 @@
+mixin section-production
+	section.production#production
+		.container
+			h2.production__title.title Продукция
+			ul.production__list
+				each item in data.catalog
+					li.production__item
+						.production__img
+							img(src=`/images/${item.photo}`, alt=`${item.name}:${item.descr}`)
+						.production__content-wrap
+							.production__content
+								.production__name= item.name
+								.production__descr.gradient= item.descr

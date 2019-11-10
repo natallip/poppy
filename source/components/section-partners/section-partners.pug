@@ -1,0 +1,10 @@
+mixin section-partners
+	section.partners#partners
+		.container
+			h2.title.partners__title Партнеры
+			p.partners__descr Это лишь малая доля организаций, с которыми мы ведём активное сотрудничество
+			.partners__slider
+				.sliderPartners.owl-carousel
+					each item in data.partners
+						.sliderPartners__item
+							img(src=`/images/${item.logo}`, alt= item.alt)

@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  &__item {
+    width: 22px;
+    height: 22px;
+    margin-right: 9px;
+    cursor: pointer;
+    a {
+      width: 22px;
+      height: 22px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &--inst {
+      background: url('/images/inst.svg') no-repeat center/22px;
+    }
+    &--vk {
+      background: url('/images/vk.svg') no-repeat center/20px;
+    } 
+    &--fb {
+      background: url('/images/fb.svg') no-repeat center/16px; 
+    }     
+  }
+}

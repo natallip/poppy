@@ -1,0 +1,39 @@
+mixin section-home
+	section.home#home
+		+header
+		.container.container--home
+			.home__slider
+				.sliderTop.owl-carousel
+					.sliderTop__item
+						img.sliderTop__img(src="./images/img1.jpg", alt="poppy")
+						.sliderTop__descr
+							span.bold poppy
+							|под рукой
+							br
+							|в любом заведении
+					.sliderTop__item
+						img.sliderTop__img(src="./images/img2.png", alt="poppy")
+						.sliderTop__descr
+							|Лёгкость, 
+							br
+							|какая есть 
+							br
+							|только у облаков
+					.sliderTop__item
+						img.sliderTop__img(src="./images/img3.jpg", alt="poppy")
+						.sliderTop__descr
+							span.bold poppy
+							|- дарит
+							br
+							|только яркие эмоции
+				.sliderTop__nav
+					button(type="button").sliderTop__nav-next
+						<svg width="14" height="57" viewBox="0 0 14 57" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.28528 1L13 28.5" stroke-width="2" stroke-linecap="round"/>
+							<path d="M1.28528 56L13 28.5" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					button(type="button").sliderTop__nav-prev
+						<svg width="14" height="57" viewBox="0 0 14 57" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.28528 1L13 28.5" stroke-width="2" stroke-linecap="round"/>
+							<path d="M1.28528 56L13 28.5" stroke-width="2" stroke-linecap="round"/>
+						</svg>

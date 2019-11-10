@@ -1,0 +1,38 @@
+mixin section-about
+	section.about#about
+		.container
+			h2.title.about__title О бренде
+			.about__wrap
+				.about__descr
+					h3.about__descr-title
+						span.bold Poppy
+						|– целый мир
+						br
+						|экологически чистой продукции			
+					.about__text
+						each text in data.aboutText
+							p= text
+				.about__info
+					ul.info
+						li.info__item
+							.info__item-number.gradient.timer( data-from="0" data-to="18" data-speed="5000") 18
+							.info__item-text товарных позиций на рынке
+						li.info__item
+							.info__item-number
+								span.gradient.timer(data-from="0" data-to="320" data-speed="5000") 320
+								span.gradient тыс.
+							.info__item-text спасенных деревьев
+						li.info__item
+							.info__item-number.gradient.timer( data-from="0" data-to="30" data-speed="5000") 30
+							.info__item-text лет работы
+				.about__reviews
+					.sliderReviews.owl-carousel
+						each item in data.reviews
+							.sliderReviews__item
+								.sliderReviews__text= item.text
+								.sliderReviews__info
+									.sliderReviews__photo
+										img(src=`/images/${item.photo}`, alt= item.name)
+									.sliderReviews__user
+										.sliderReviews__name.gradient= item.name
+										.sliderReviews__descr= item.descr

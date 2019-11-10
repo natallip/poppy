@@ -1,0 +1,267 @@
+.about {
+  padding-top: 36px;
+  @include media1060 {
+    padding-top: 60px;
+  }
+  @include media480 {
+     padding-bottom: 20px; 
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include media1060 {
+      margin-bottom: 37px;
+    }
+    @include media480 {
+      margin-bottom: 30px;
+    }
+  } 
+  &__wrap {
+    display: flex;
+    @include media1060 {
+      flex-wrap: wrap;
+    }
+  }
+  &__descr {
+    width: 50%;
+    padding-right: 10px;
+    @include media1060 {
+      width: 70%;
+      font-size: 14px;
+      p {
+        margin-bottom: 24px;
+      }
+    }
+    @include media768 {
+      width: 100%;
+      padding-right: 0;
+    }
+    @include media480 {
+      margin-bottom: 15px;
+    }
+  }
+  &__descr-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 26px;
+    @include media640 {
+      font-size: 18px;
+    }
+    @include media480 {
+      margin-bottom: 16px;
+    }
+  }
+  &__text {
+    line-height: 120%;
+    color: #3E3E3E;
+    @include media960 {
+      font-size: 14px;
+    }
+    @include media480 {
+      font-size: 13px;
+      p {
+        margin-bottom: 14px;
+      }
+    }
+  }
+  &__info {
+    width: 17%;
+    padding: 0 1%;
+    @include media1060 {
+      width: 30%;
+      margin-bottom: 20px;
+    }
+    @include media768 {
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 0;
+    }
+  }
+  &__reviews {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    @include media1060 {
+      width: 100%;
+    }
+  }
+}
+.info {
+  @include media768 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  @include media640 {
+    justify-content: space-between;
+  }
+  &__item {
+    text-align: center;
+    margin-bottom: 23px;
+    @include media768 {
+      margin-bottom: 0;
+    }    
+    &:nth-child(2) {
+      //line-height: 32px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item-number {
+    font-family: 'Playfair Display';
+    font-size: 40px;
+    max-width: 100px;
+    margin: 0 auto 5px;
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+        position: relative;
+        transform: translateY(-14px);
+        @include media640 {
+          transform: translateY(0);
+        }  
+      }
+    }      
+    @include media640 {
+      font-size: 24px;
+    }
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 120%;
+    max-width: 140px;
+    margin: 0 auto;
+    @include media480 {
+      font-size: 12px;
+      max-width: 60px;
+    }
+  }
+}
+.sliderReviews {
+  max-width: 410px;
+  @include media1060 {
+    max-width: 100%;
+  }
+  @include media540 {
+    width: 280px;  
+  }
+  &__item {
+    max-width: 410px; 
+    padding: 0 10px;   
+    position: relative;
+    @include media1060 {
+      display: flex;
+      max-width: 100%;
+    }
+    @include media768 {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    @include media540 {
+      width: 280px;
+      padding: 0;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 123%;
+    color: #3E3E3E;
+    font-family: 'Open Sans Light Italic';
+    padding: 54px 17px 19px;
+    background: #fff url('/images/quotes.png') no-repeat 22px 20px/31px 19px;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 22px;
+    position: relative;
+    @include media1060 {
+      width: 390px;
+      flex-shrink: 0;
+      margin-right: 38px;
+    }
+    @include media768 {
+      margin-right: 0;
+    }
+    @include media540 {
+      width: 280px;
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 13px;
+      box-shadow: none;
+    }
+    &:before {
+      content: '';
+      border: 8px solid transparent;
+      border-top: 20px solid#fff;
+      position: absolute;
+      left: 32px;
+      bottom: -24px;
+      width: 0;
+      @include media1060 {
+        border: 8px solid transparent;
+        border-left: 20px solid#fff;
+        right: -25px;
+        top: 55%;
+        left: auto;
+        height: 0;
+      }
+      @include media768 {
+        left: auto;
+        bottom: -24px;
+        right: 40px;
+        top: auto;
+        border: 8px solid transparent;
+        border-top: 20px solid#fff;
+      }
+   }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    @include media1060 {
+      margin-top: 12px;      
+    }    
+  }
+  &__photo {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    @include media768 {
+      order: 1;
+      margin-right: 0;
+      margin-left: 18px;
+    }
+    @include media540 {
+      margin-right: 10px;
+    }
+    img {
+      object-fit: cover;
+      object-position: center;
+      max-width: 100%;
+      max-height: 100%;
+    }   
+  }
+  &__user {
+    @include media768 {
+      text-align: right;
+    }
+  }
+  &__name {
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__descr {
+    color: #818181;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}

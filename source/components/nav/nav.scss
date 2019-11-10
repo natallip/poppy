@@ -1,0 +1,35 @@
+.navigation {
+  display: flex;
+  z-index: 1;
+  &__list {
+    display: flex;
+    @include media480 {
+      justify-content: space-between;
+      max-width: 280px;
+    }
+  }
+  &__item {
+    min-width: 76px;
+    margin-right: 30px;
+    color: $text;
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include media480 {
+      font-size: 12px;
+      margin-right: 0;
+      max-width: auto;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: inherit;
+      font-weight: bold;
+    }
+    &:hover {
+      color: #565656;
+    }
+  }
+}

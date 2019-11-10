@@ -1,0 +1,94 @@
+.home {
+  .container--home {
+    @include media1060 {
+      width: 100%;
+      padding: 0;
+    }
+  }  
+}
+.home__slider {
+  position: relative;
+}
+.sliderTop {
+  &__item {
+    height: 660px;
+    width: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    @include media768 {
+      height: 400px;
+    }
+    @include media640 {
+      height: 300px;
+    }
+    @include media480 {
+      height: 220px;
+    }
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  &__descr {
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 36px;
+    line-height: 143.5%;
+    @include media768 {
+      font-size: 20px;
+    }    
+  }
+  &__nav {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    @include media640 {
+      height: 35px;
+    }
+    button {
+      background: transparent;
+      border: none;
+      padding: 20px;
+      outline: none;
+      svg {
+        width: 15px;
+        height: 60px;
+        stroke: #818181;
+        fill: #818181;
+        transition: 0.3s;
+        @include media640 {
+          height: 35px;
+        }
+      }
+      &:hover {
+        svg {
+          fill: #fff;
+          stroke: #fff;
+          transition: 0.3s;
+        }
+      }
+    }
+    &-next {
+      position: absolute;
+      right: 10px;
+    }
+    &-prev {
+      position: absolute;
+      left: 10px;
+      svg {
+        transform: rotate(180deg);
+      }      
+    }    
+  }
+}
